@@ -25,7 +25,6 @@ struct WeatherManager {
     
     func performRequest(_ urlString: String) {
         if let url = URL(string: urlString) {
-            print(url)
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
